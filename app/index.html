@@ -13,7 +13,9 @@
     <header class="header">
         <div class="container">
             <div class="header__logo">
-                <img src="./img/logo.png" alt="website logo">
+                <a href="#">
+                    <img src="./img/logo.png" alt="website logo">
+                </a>
             </div>
             <div class="header__text">Все каршеринг-сервисы Минска в одном приложении</div>
             <div class="header__buttons">
@@ -190,19 +192,19 @@
             <form class="contact-form__form" action="">
                 <div class="inputs">
                     <label for="inputName">Имя</label>
-                    <input id="inputName" type="text">
+                    <input id="inputName" type="text" placeholder="Соня">
                     <label for="inputEmail">Почта</label>
-                    <input id="inputEmail" type="email">
+                    <input id="inputEmail" type="email" placeholder="sonya_velichko@mail.ru">
                     <label for="inputTel">Телефон</label>
-                    <input id="inputTel" type="tel">
-                    <label class="inputs__checkbox">
-                        Соглашаюсь с <a href="#">условиями обработки персональных данных</a>
-                        <input type="checkbox">
-                    </label>
+                    <input id="inputTel" type="tel" placeholder="+358285739556">
+                    <div class="inputs__checkbox">
+                        <input type="checkbox" id="terms">
+                        <label for="terms">Соглашаюсь с <a href="#">условиями обработки персональных данных</a></label>
+                    </div>
                 </div>
                 <div class="textarea">
                     <label for="textArea">Ваше сообщение</label>
-                    <textarea name="" id="textArea" cols="30" rows="10"></textarea>
+                    <textarea name="" id="textArea" placeholder="Очень полезный сервис. Хочу с вами работать!"></textarea>
                     <input type="submit" value="Отправить">
                 </div>
             </form>
@@ -213,15 +215,18 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__items">
-                <div class="footer__item">
-                    <div class="footer__item-icon"></div>
-                    <div class="footer__item-contact">carShare.minsk@gmail.com</div>
+                <div class="footer__items-item">
+                    <div class="footer__items-item__icon icon-first"></div>
+                    <div class="footer__items-item__contact">carShare.minsk@gmail.com</div>
                 </div>
-                <div class="footer__item">
-                    <div class="footer__item-icon"></div>
-                    <div class="footer__item-contact">@carshare.minsk</div>
+                <div class="footer__items-item">
+                    <div class="footer__items-item__icon icon-second"></div>
+                    <div class="footer__items-item__contact">@carshare.minsk</div>
                 </div>
             </div>
+        </div>
+        <div class="footer__img">
+            <!-- <img src="./img/footer-image.png" alt="footer image"> -->
         </div>
     </footer>
     <!-- / Footer -->

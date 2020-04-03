@@ -71,9 +71,15 @@ a {
                 font-size: 16px;
                 line-height: 20px;
                 color: #fff;
+                position: relative;
+                bottom: 0;
+                transition: all .3s;
                 .btn-logo {
                     margin-right: 15px;
                 }
+            }
+            a:hover {
+                bottom: 5px;
             }
         }
     }
@@ -89,11 +95,15 @@ a {
 
 // Proposal
 .proposal {
+    padding-top: 110px;
+    background-image: url("../img/proposal-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     margin-bottom: 235px;
     background-color: #fff;
     &__description {
         max-width: 985px;
-        margin: 110px auto 105px;
+        margin: 0 auto 105px;
         text-align: center;
         font-size: 35px;
         line-height: 43px;
@@ -229,6 +239,7 @@ a {
     margin-bottom: 145px;
     &__title {
         @include title;
+        color: #fff;
     }
     &__buttons {
         display: flex;
@@ -245,6 +256,9 @@ a {
                 background-color: #F55B5B;
                 padding: 10px 30px;
                 border-radius: 10px;
+                position: relative;
+                bottom: 0;
+                transition: all .3s;
                 img {
                     margin: 0 10px -3px 0;
                 }
@@ -252,6 +266,9 @@ a {
                     font-size: 40px;
                     color: #fff;
                 }
+            }
+            a:hover {
+                bottom: 8px;
             }
         }
     }
@@ -298,6 +315,7 @@ a {
 
 // Form
 .contact-form {
+    margin-bottom: 135px;
     &__title {
         @include title;
         max-width: 860px;
@@ -315,24 +333,100 @@ a {
             flex-direction: column;
             margin-right: 112px;
             input {
+                max-width: 390px;
                 padding: 5px;
                 margin-bottom: 30px;
                 color: $headingText-color;
                 line-height: 20px;
                 border: none;
-                border-bottom: 1px solid $headingText-color;
+                border-bottom: 1px solid rgba(5, 46, 112, 0.3);
                 outline: none;
+                transition: .3s;
+            }
+            input::placeholder {
+                color: rgba(5, 46, 112, 0.3);
+                transition: .3s;
+            }
+            input:focus {
+                border-bottom: 1px solid $headingText-color;
+            }
+            input:focus::placeholder {
+                opacity: 0;
             }
             &__checkbox {
                 input {
-                    border-color: $headingText-color;
+                    display: none;
+                }
+                label {
+                    a {
+                        color: $headingText-color;
+                        text-decoration: underline;
+                    }
+                }
+                label::before {
+                    content: "";
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid $primary-color;
+                    border-radius: 5px;
+                    background-color: #fff;
                     margin-right: 11px;
+                    vertical-align: middle;
+                    // transition: all .3s;
+                }
+                input:checked+label::before {
+                    content: "";
+                    background-image: url("../img/tick.png");
+                    background-size: 100%;
                 }
             }
         }
         .textarea {
             display: flex;
             flex-direction: column;
+            label {
+                margin-bottom: 17px;
+            }
+            textarea {
+                width: 433px;
+                height: 178px;
+                outline: none;
+                border-color: 1px solid rgba(5, 46, 112, 0.3);
+                border-radius: 5px;
+                resize: none;
+                padding: 5px;
+                color: $headingText-color;
+                line-height: 20px;
+                margin-bottom: 27px;
+            }
+            textarea::placeholder {
+                color: rgba(5, 46, 112, 0.3);
+                transition: .3s;
+            }
+            textarea:focus {
+                border: 1px solid $headingText-color;
+            }
+            textarea:focus::placeholder {
+                opacity: 0;
+            }
+            input[type="submit"] {
+                width: 115px;
+                height: 31px;
+                background-color: $btn-color;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+                position: relative;
+                bottom: 0;
+                transition: all .3s;
+            }
+            input[type="submit"]:hover {
+                bottom: 5px;
+            }
         }
     }
 }
@@ -344,6 +438,43 @@ a {
 *
 */
 
+// Footer
+.footer {
+    background-color: $primary-color;
+    padding: 25px 0 35px;
+    &__items {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        &-item+&-item {
+            margin-left: 75px;
+        }
+        &-item {
+            // text-align: center;
+            &__icon {
+                margin: 0 auto 5px;
+                width: 30px;
+                height: 30px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+            .icon-first {
+                background-image: url("../img/email-icon.png");
+            }
+            .icon-second {
+                background-image: url("../img/insta-icon.png");
+            }
+        }
+    }
+    &__img {
+        height: 100px;
+        background-image: url("../img/footer-image.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+// / Footer
 // / End of styles
 // Should be in the end
 @import 'media';

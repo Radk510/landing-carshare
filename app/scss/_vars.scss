@@ -1,0 +1,45 @@
+// Mixins
+@mixin title {
+    margin: 0 auto 50px;
+    font-family: $heading-font;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+    color: $headingText-color;
+}
+
+// / Mixins
+
+/*
+*
+*
+*/
+
+// backgrounds colors
+$primary-color: #052E70;
+// / backgrounds colors
+
+/*
+*
+*
+*/
+
+// Fonts color
+$simpleText-color: #55719E;
+$headingText-color: #052E70;
+// / Fonts color
+
+/*
+*
+*
+*/
+
+// Fonts
+$text-font: 'Montserrat',
+sans-serif;
+$linkBtn-font: 'Roboto',
+sans-serif;
+$heading-font: 'Comfortaa',
+cursive;
+// / Fonts

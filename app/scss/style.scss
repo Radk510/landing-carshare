@@ -1,0 +1,349 @@
+@import '../../node_modules/normalize.css/normalize';
+@import 'vars';
+@import 'libs';
+@import 'fonts';
+// Start of styles
+
+/*
+*
+*
+*/
+
+// Common
+* {
+    box-sizing: border-box;
+}
+
+body {
+    cursor: default;
+    font-family: $text-font;
+    color: $simpleText-color;
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+// / Common
+
+/*
+*
+*
+*/
+
+// Header
+.header {
+    background-color: $primary-color;
+    height: 100vh;
+    padding-top: 200px;
+    &__logo {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    &__text {
+        max-width: 686px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 35px;
+        line-height: 43px;
+        color: #fff;
+        margin-bottom: 60px;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        &-btn {
+            margin-right: 30px;
+            a {
+                background: linear-gradient(9.61deg, #0D47A1 0%, #86E3F8 93.26%), #FFFFFF;
+                display: flex;
+                width: 206px;
+                height: 61px;
+                padding: 8px 11px 9px;
+                border-radius: 10px;
+                font-family: $linkBtn-font;
+                font-size: 16px;
+                line-height: 20px;
+                color: #fff;
+                .btn-logo {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+// / Header
+
+/*
+*
+*
+*
+*/
+
+// Proposal
+.proposal {
+    margin-bottom: 235px;
+    background-color: #fff;
+    &__description {
+        max-width: 985px;
+        margin: 110px auto 105px;
+        text-align: center;
+        font-size: 35px;
+        line-height: 43px;
+    }
+    &__title {
+        @include title;
+        margin-bottom: 60px;
+    }
+    &__tips {
+        display: flex;
+        &-item+&-item {
+            border-left: 2px solid rgba(5, 46, 112, 0.3);
+        }
+        &-item {
+            padding: 0 20px 20px;
+            text-align: center;
+            &__icon {
+                margin-bottom: 30px;
+            }
+            .icon-first {
+                margin-bottom: 50px;
+            }
+            .icon-second {
+                margin-bottom: 60px;
+            }
+            .icon-third {
+                margin-bottom: 42px;
+            }
+            &__text {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// / Proposal
+
+/*
+*
+*
+*/
+
+// Functions
+.function {
+    margin-bottom: 200px;
+    &__inner {
+        display: flex;
+        padding: 0 47px;
+        .function__icon {
+            padding-right: 30px;
+        }
+        .function__description {
+            &-title {
+                @include title;
+                margin: 0 0 50px 50px;
+            }
+            &-text {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+// / Functions
+
+/*
+*
+*
+*/
+
+// Usage
+.usage {
+    margin-bottom: 200px;
+    position: relative;
+    &__line {
+        position: absolute;
+        bottom: 15px;
+        z-index: -5;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        @include title;
+    }
+    &__tips {
+        display: flex;
+        justify-content: center;
+        &-item+&-item {
+            margin-left: 160px;
+        }
+        &-item {
+            text-align: center;
+            .num-one {
+                color: #89E6FA;
+            }
+            .num-two {
+                color: #8DBBDE;
+            }
+            .num-three {
+                color: #1855A9;
+            }
+            &__num {
+                font-family: $heading-font;
+                font-weight: bold;
+                font-size: 70px;
+                line-height: 78px;
+            }
+            &__text {
+                width: 265px;
+                font-size: 25px;
+                line-height: 30px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+}
+
+// / Usage
+
+/*
+*
+*
+*/
+
+// Download
+.download {
+    background-color: $headingText-color;
+    padding: 36px 0 60px;
+    margin-bottom: 145px;
+    &__title {
+        @include title;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        &-btn+&-btn {
+            margin-left: 50px;
+        }
+        &-btn {
+            a {
+                display: inline-block;
+                text-align: center;
+                width: 272px;
+                height: 69px;
+                background-color: #F55B5B;
+                padding: 10px 30px;
+                border-radius: 10px;
+                img {
+                    margin: 0 10px -3px 0;
+                }
+                span {
+                    font-size: 40px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// / Download
+
+/*
+*
+*
+*/
+
+// Team
+.team {
+    margin-bottom: 185px;
+    &__title {
+        @include title;
+        margin-bottom: 60px;
+    }
+    &__members {
+        padding: 0 25px;
+        display: flex;
+        justify-content: space-between;
+        &-member {
+            img {
+                margin-bottom: 23px;
+            }
+            &__name {
+                text-align: center;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// / Team
+
+/*
+*
+*
+*/
+
+// Form
+.contact-form {
+    &__title {
+        @include title;
+        max-width: 860px;
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+        label {
+            font-size: 14px;
+            line-height: 17px;
+            color: $headingText-color;
+        }
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            margin-right: 112px;
+            input {
+                padding: 5px;
+                margin-bottom: 30px;
+                color: $headingText-color;
+                line-height: 20px;
+                border: none;
+                border-bottom: 1px solid $headingText-color;
+                outline: none;
+            }
+            &__checkbox {
+                input {
+                    border-color: $headingText-color;
+                    margin-right: 11px;
+                }
+            }
+        }
+        .textarea {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+// / Form
+
+/*
+*
+*
+*/
+
+// / End of styles
+// Should be in the end
+@import 'media';

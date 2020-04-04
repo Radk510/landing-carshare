@@ -45,6 +45,11 @@ a {
     &__logo {
         margin-bottom: 25px;
         text-align: center;
+        a {
+            img {
+                max-width: 100%;
+            }
+        }
     }
     &__text {
         max-width: 686px;
@@ -58,8 +63,10 @@ a {
     &__buttons {
         display: flex;
         justify-content: center;
+        &-btn+&-btn {
+            margin-left: 30px;
+        }
         &-btn {
-            margin-right: 30px;
             a {
                 background: linear-gradient(9.61deg, #0D47A1 0%, #86E3F8 93.26%), #FFFFFF;
                 display: flex;
@@ -221,6 +228,9 @@ a {
                 line-height: 30px;
                 margin-bottom: 17px;
             }
+            .smallScreen-line {
+                display: none;
+            }
         }
     }
 }
@@ -254,7 +264,7 @@ a {
                 width: 272px;
                 height: 69px;
                 background-color: #F55B5B;
-                padding: 10px 30px;
+                padding: 10px 15px;
                 border-radius: 10px;
                 position: relative;
                 bottom: 0;
@@ -450,7 +460,6 @@ a {
             margin-left: 75px;
         }
         &-item {
-            // text-align: center;
             &__icon {
                 margin: 0 auto 5px;
                 width: 30px;

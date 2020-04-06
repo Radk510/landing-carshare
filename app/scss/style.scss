@@ -328,7 +328,19 @@ a {
     margin-bottom: 135px;
     &__title {
         @include title;
+        margin-bottom: 20px;
         max-width: 860px;
+    }
+    .sendAlert {
+        text-align: center;
+        margin: 0 auto 20px;
+        padding: 10px;
+        width: 50%;
+        border: 1px solid rgba(18, 235, 36, 0.521);
+        border-radius: 5px;
+        display: block;
+        opacity: 0;
+        transition-delay: .4s;
     }
     &__form {
         display: flex;

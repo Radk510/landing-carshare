@@ -205,22 +205,25 @@
     <section class="contact-form">
         <div class="container">
             <div class="contact-form__title">Есть вопросы и пожелания? Напишите нам</div>
-            <form class="contact-form__form" action="">
+            <div class="sendAlert">
+                Ваше письмо отправленно.
+            </div>
+            <form class="contact-form__form" id="contactForm" action="">
                 <div class="inputs">
-                    <label for="inputName">Имя</label>
-                    <input id="inputName" type="text" placeholder="Соня">
-                    <label for="inputEmail">Почта</label>
-                    <input id="inputEmail" type="email" placeholder="sonya_velichko@mail.ru">
-                    <label for="inputTel">Телефон</label>
-                    <input id="inputTel" type="tel" placeholder="+358285739556">
+                    <label for="name">Имя</label>
+                    <input id="name" type="text" name="name" placeholder="Соня" required>
+                    <label for="email">Почта</label>
+                    <input id="email" type="email" name="email" placeholder="sonya_velichko@mail.ru" required>
+                    <label for="phone">Телефон</label>
+                    <input id="phone" type="tel" name="phone" placeholder="+358285739556" required>
                     <div class="inputs__checkbox">
-                        <input type="checkbox" id="terms">
-                        <label for="terms">Соглашаюсь с <a href="#">условиями обработки персональных данных</a></label>
+                        <input id="termsCheckbox" type="checkbox" name="termsCheckbox">
+                        <label for="termsCheckbox">Соглашаюсь с <a href="#">условиями обработки персональных данных</a></label>
                     </div>
                 </div>
                 <div class="textarea">
-                    <label for="textArea">Ваше сообщение</label>
-                    <textarea name="" id="textArea" placeholder="Очень полезный сервис. Хочу с вами работать!"></textarea>
+                    <label for="message">Ваше сообщение</label>
+                    <textarea name="massage" id="message" placeholder="Очень полезный сервис. Хочу с вами работать!" required></textarea>
                     <input type="submit" value="Отправить">
                 </div>
             </form>
@@ -243,14 +246,16 @@
             </div>
         </div>
         <div class="footer__img">
-            <!-- <img src="./img/footer-image.png" alt="footer image"> -->
         </div>
     </footer>
     <!-- / Footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
-    <script src="js/mail.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
